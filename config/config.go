@@ -18,6 +18,7 @@ type Config struct {
 	NewsAPIKey        string
 	GhostKey          string
 	GhostURL          string
+	OpenAIAPIKey      string
 }
 
 // NewConfig creates a new Config instance with values loaded from environment variables
@@ -35,6 +36,7 @@ func NewConfig() *Config {
 		NewsAPIKey:        getEnv("NEWSAPI_KEY", ""),
 		GhostKey:          getEnv("GHOST_KEY", ""),
 		GhostURL:          getEnv("GHOST_URL", "http://localhost:8080"),
+		OpenAIAPIKey:      getEnv("OPENAI_KEY", ""),
 	}
 }
 
